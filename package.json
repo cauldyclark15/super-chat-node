@@ -1,0 +1,32 @@
+{
+  "name": "super-chat-node",
+  "version": "1.0.0",
+  "description": "real time web app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "7.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cauldyclark15/super-chat-node.git"
+  },
+  "keywords": [
+    "chat",
+    "node",
+    "express",
+    "react"
+  ],
+  "author": "cauldyclark15",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cauldyclark15/super-chat-node/issues"
+  },
+  "homepage": "https://github.com/cauldyclark15/super-chat-node#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
