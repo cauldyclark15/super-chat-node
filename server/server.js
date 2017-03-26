@@ -11,11 +11,21 @@ const server = http.createServer(app);
 const io = socketIO(server);
 
 io.on('connection', (socket) => {
-  console.log(`new user connected: ${socket}`);
+  console.log(`new user connected`);
+
+  socket.on('createMessage', (newMessage) => {
+    io.emit('newMessage', {
+      from: newMessage.from,
+      text: newMessage.text,
+      sent: new Date().toISOString()
+    });
+
+    // console.log('createEmail', newMessage);
+  });
 
   socket.on('disconnect', () => {
     console.log('disconnected from client');
-  })
+  });
 })
 
 app.use(express.static(publicPath));
